@@ -10,9 +10,13 @@ Current scope:
 - presentation of the dogs and location;
 - photographs and videos;
 - contact information;
-- French and English support later.
+- French first, then English, then Finnish and possibly other languages later.
 
 Online booking is not part of the first version, but the site must remain easy to extend.
+
+## Business context
+
+Validated project facts (location, dogs, languages, etc.) live in [`docs/PROJECT.md`](docs/PROJECT.md). Read it before writing or changing site content. Do not invent business facts; use explicit `TODO` placeholders when information is missing.
 
 ## Stack
 

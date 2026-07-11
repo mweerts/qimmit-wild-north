@@ -1,43 +1,42 @@
-# Astro Starter Kit: Minimal
+# Qimmit Wild North
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : activités touristiques autour des chiens de traîneau (Esquimau canadien / Qimmiq), près de Kuusamo, en Finlande.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Documentation
 
-## 🚀 Project Structure
+- [Contexte et faits métier](docs/PROJECT.md)
+- [Feuille de route](docs/ROADMAP.md)
+- [Règles de travail pour les agents](AGENTS.md)
 
-Inside of your Astro project, you'll see the following folders and files:
+## Prérequis
+
+- Node.js >= 22.12.0
+- npm
+
+## Commandes
+
+| Commande | Action |
+| -------- | ------ |
+| `npm install` | Installe les dépendances |
+| `npm run dev` | Serveur local sur `localhost:4321` |
+| `npm run build` | Build de production dans `./dist/` |
+| `npm run preview` | Prévisualise le build localement |
+
+## Structure du dépôt
 
 ```text
 /
-├── public/
+├── docs/           # documentation projet (métier, roadmap)
+├── public/         # fichiers statiques servis tels quels (favicon, images web)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   └── pages/      # routes Astro
+├── AGENTS.md       # instructions pour Cursor
+├── astro.config.mjs
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Les contenus Markdown, layouts, composants et styles seront ajoutés dans `src/` au fil du développement. Ne pas committer de photos ou vidéos brutes ; utiliser des versions optimisées pour le web dans `public/images/`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Stack
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Astro, TypeScript, HTML sémantique, CSS plain, contenu Markdown, npm.

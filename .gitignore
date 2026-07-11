@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# raw / large media (keep optimized web assets in public/images/ only)
+media/raw/
+*.mov
+*.mp4
+*.MP4
