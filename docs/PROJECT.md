@@ -25,10 +25,23 @@ Qimmit Wild North est un site vitrine simple et maintenable destiné à présent
 
 | Nom | Notes |
 |-----|-------|
-| **Siku** | Premier chien du projet. |
+| **Siku** | Premier chien du projet. Nom actuel : Siku ; nom de pedigree : Arctous ; élevage : Nunavut Inuit Heritage. Description publiée : [`src/content/dogs/siku.md`](../src/content/dogs/siku.md). |
 | **Asiaq** | Deuxième chien du projet. |
 
-Les deux sont mâles et proviennent de la même fratrie. Des descriptions individuelles restent à rédiger pour le site (`TODO`).
+Les deux sont mâles et proviennent de la même fratrie.
+
+### Siku
+
+- **Nom actuel :** Siku.
+- **Nom de pedigree :** Arctous.
+- **Élevage :** Nunavut Inuit Heritage.
+- **Signification du nom :** « banquise », en inuktitut.
+- **Rôle dans le projet :** premier chien esquimau canadien à rejoindre Qimmit Wild North ; point de départ de l'aventure.
+- **Tempérament (tel que décrit par le porteur du projet) :** fidèle, protecteur, curieux, explorateur, très attaché à son humain.
+
+### Asiaq
+
+Description individuelle à rédiger pour le site (`TODO`).
 
 ## Langues du site
 
@@ -46,7 +59,7 @@ La première version présente le projet, les chiens, le lieu, les médias et le
 
 ## Informations métier à compléter
 
-- TODO : description individuelle de Siku et Asiaq pour le site.
+- TODO : description individuelle d'Asiaq pour le site.
 - TODO : indications d'accès pour les visiteurs (parking, accès hiver/été, etc.).
 - TODO : histoire personnelle du porteur de projet et formulation publique de la mission de conservation.
 - TODO : activités ou expériences proposées (détail des offres touristiques).
