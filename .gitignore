@@ -28,3 +28,6 @@ media/raw/
 *.mov
 *.mp4
 *.MP4
+
+# macOS archive junk from designer deliveries
+__MACOSX/

@@ -18,6 +18,8 @@ Online booking is not part of the first version, but the site must remain easy t
 
 Validated project facts (location, dogs, languages, etc.) live in [`docs/PROJECT.md`](docs/PROJECT.md). Read it before writing or changing site content. Do not invent business facts; use explicit `TODO` placeholders when information is missing.
 
+Logo and brand asset locations are documented in [`docs/BRAND.md`](docs/BRAND.md).
+
 ## Stack
 
 - Astro

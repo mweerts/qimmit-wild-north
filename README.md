@@ -5,6 +5,7 @@ Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : activités touristiques
 ## Documentation
 
 - [Contexte et faits métier](docs/PROJECT.md)
+- [Identité visuelle](docs/BRAND.md)
 - [Feuille de route](docs/ROADMAP.md)
 - [Règles de travail pour les agents](AGENTS.md)
 
@@ -26,16 +27,21 @@ Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : activités touristiques
 
 ```text
 /
-├── docs/           # documentation projet (métier, roadmap)
-├── public/         # fichiers statiques servis tels quels (favicon, images web)
+├── docs/                  # documentation projet (métier, identité, roadmap)
+├── media/
+│   ├── brand/valise/      # valise graphiste (sources + exports de référence)
+│   └── raw/               # photos et vidéos brutes (hors Git)
+├── public/
+│   ├── brand/             # logos SVG pour le site
+│   └── images/            # images web optimisées
 ├── src/
-│   └── pages/      # routes Astro
-├── AGENTS.md       # instructions pour Cursor
+│   └── pages/             # routes Astro
+├── AGENTS.md              # instructions pour Cursor
 ├── astro.config.mjs
 └── package.json
 ```
 
-Les contenus Markdown, layouts, composants et styles seront ajoutés dans `src/` au fil du développement. Ne pas committer de photos ou vidéos brutes ; utiliser des versions optimisées pour le web dans `public/images/`.
+Les contenus Markdown, layouts, composants et styles seront ajoutés dans `src/` au fil du développement. La valise graphique (`media/brand/`) est versionnée dans Git. Ne pas committer de photos ou vidéos brutes (`media/raw/`) ; utiliser des versions optimisées pour le web dans `public/images/`. Seuls les SVG de `public/brand/` sont servis sur le site.
 
 ## Stack
 
