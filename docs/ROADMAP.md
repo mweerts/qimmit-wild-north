@@ -1,9 +1,20 @@
 # Feuille de route
 
+## Avancement
+
+Déjà en place :
+
+- Valise graphiste intégrée (`media/brand/valise/`, `public/brand/`) — voir [`BRAND.md`](BRAND.md).
+- Organisation des contenus Markdown amorcée (`src/content/dogs/`).
+- Description de **Siku** publiée dans [`src/content/dogs/siku.md`](../src/content/dogs/siku.md).
+- Build Astro fonctionnel.
+
+Prochaines étapes prioritaires : styles globaux, navigation, page d'accueil, page chiens, description d'**Asiaq**.
+
 ## 1. Fondations
 
 - Confirmer le périmètre de la première version.
-- Organiser les contenus Markdown séparément de la mise en page.
+- Organiser les contenus Markdown séparément de la mise en page. *(amorcé : `src/content/dogs/`)*
 - Définir une structure simple pour le français et l'anglais à venir.
 - Mettre en place les styles globaux, les variables CSS et les composants Astro essentiels.
 - Vérifier régulièrement la compilation et l'affichage mobile.
@@ -19,6 +30,7 @@
 
 ## 3. Identité visuelle
 
+- Intégrer la valise graphiste au dépôt. *(fait)*
 - Définir la palette, la typographie et les espacements.
 - Concevoir une direction nordique, documentaire, naturelle et calme.
 - Donner la priorité aux photographies sans surcharger les pages.
@@ -27,7 +39,7 @@
 
 ## 4. Contenu et médias
 
-- Rassembler et valider les textes métier ; conserver les informations inconnues en `TODO`.
+- Rassembler et valider les textes métier ; conserver les informations inconnues en `TODO`. *(Siku fait ; Asiaq en attente)*
 - Sélectionner les médias issus du drone, de la GoPro et du téléphone.
 - Préparer des versions web optimisées sans ajouter les fichiers bruts au dépôt.
 - Rédiger les légendes, textes alternatifs et crédits.

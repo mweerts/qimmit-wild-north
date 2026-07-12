@@ -20,6 +20,26 @@ Qimmit Wild North est un site vitrine simple et maintenable destiné à présent
 - Le parc est construit.
 - Deux chiens (Esquimau canadien / Qimmiq) : **Siku** et **Asiaq**, mâles de la même portée.
 - Des photographies et des vidéos peuvent être produites avec un drone, une GoPro et un téléphone.
+- Valise graphique intégrée au dépôt (voir [`BRAND.md`](BRAND.md)).
+- Description publique de **Siku** rédigée (voir [`src/content/dogs/siku.md`](../src/content/dogs/siku.md)).
+- Site vitrine en cours de construction : page d'accueil placeholder, pas encore de mise en page ni de navigation.
+
+## Organisation du contenu
+
+| Emplacement | Rôle |
+| ----------- | ---- |
+| `docs/` | Documentation du projet : faits métier validés, identité visuelle, feuille de route. |
+| `src/content/` | Textes du site en Markdown, séparés de la mise en page. |
+| `src/pages/` | Routes et templates Astro. |
+| `public/` | Fichiers statiques servis tels quels (logos, images web). |
+| `media/brand/` | Archive de la valise graphiste (versionnée). |
+| `media/raw/` | Médias bruts (photos, vidéos), hors Git. |
+
+Pour chaque chien, distinguer trois informations quand elles sont connues :
+
+1. **Nom actuel** — nom utilisé au quotidien et affiché sur le site.
+2. **Nom de pedigree** — nom d'origine inscrit au pedigree.
+3. **Élevage** — nom de l'élevage d'origine.
 
 ## Les chiens
 

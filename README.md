@@ -35,13 +35,49 @@ Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : activités touristiques
 │   ├── brand/             # logos SVG pour le site
 │   └── images/            # images web optimisées
 ├── src/
+│   ├── content/           # contenus Markdown (textes du site)
+│   │   └── dogs/          # fiches des chiens
 │   └── pages/             # routes Astro
 ├── AGENTS.md              # instructions pour Cursor
 ├── astro.config.mjs
 └── package.json
 ```
 
-Les contenus Markdown, layouts, composants et styles seront ajoutés dans `src/` au fil du développement. La valise graphique (`media/brand/`) est versionnée dans Git. Ne pas committer de photos ou vidéos brutes (`media/raw/`) ; utiliser des versions optimisées pour le web dans `public/images/`. Seuls les SVG de `public/brand/` sont servis sur le site.
+## Contenus
+
+Les textes du site vivent dans `src/content/`, séparés de la mise en page Astro dans `src/pages/`, `src/layouts/` et `src/components/` (à venir).
+
+Les faits métier validés (lieu, chiens, langues, etc.) sont résumés dans [`docs/PROJECT.md`](docs/PROJECT.md). Avant d'écrire ou de modifier un contenu public, s'y référer. Ne pas inventer d'informations : utiliser des `TODO` explicites quand une information manque.
+
+### Chiens
+
+Chaque chien a une fiche Markdown dans `src/content/dogs/`. Pour l'instant :
+
+| Fichier | Chien | Statut |
+| ------- | ----- | ------ |
+| [`siku.md`](src/content/dogs/siku.md) | Siku | Description publiée |
+| `asiaq.md` | Asiaq | À rédiger |
+
+Convention de nommage pour un chien :
+
+- **nom actuel** — celui utilisé au quotidien et sur le site ;
+- **nom de pedigree** — nom d'origine inscrit au pedigree ;
+- **élevage** — nom de l'élevage d'origine.
+
+## Médias et identité visuelle
+
+- La **valise graphique** (`media/brand/`) est versionnée dans Git.
+- Les **logos SVG** servis sur le site sont dans `public/brand/`.
+- Les **photos et vidéos brutes** (`media/raw/`, `*.mov`, `*.mp4`) restent hors Git ; utiliser des versions optimisées dans `public/images/`.
+
+Voir [`docs/BRAND.md`](docs/BRAND.md) pour les variantes de logo et les chemins web.
+
+## Avancement
+
+- Projet Astro initialisé, build fonctionnel.
+- Valise graphiste intégrée (`media/brand/valise/`, `public/brand/`).
+- Description de **Siku** rédigée (`src/content/dogs/siku.md`).
+- Pages, styles, navigation et galerie : à construire (voir [`docs/ROADMAP.md`](docs/ROADMAP.md)).
 
 ## Stack
 
