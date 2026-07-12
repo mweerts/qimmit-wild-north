@@ -10,6 +10,15 @@ La race choisie est l'**Esquimau canadien** (*Canadian Eskimo Dog*, ou **Qimmiq*
 
 Ce dépôt sert à construire le **site vitrine** de ce projet.
 
+## Équipe et rôles
+
+| Rôle | Personne | Responsabilité |
+| ---- | -------- | -------------- |
+| **Porteur du projet** | Romain | Initiative, terrain, chiens, activités, textes et faits métier à publier. |
+| **Développement du site** | Maxime (frère de Romain, développeur) | Construction et maintenance du site vitrine dans ce dépôt. |
+
+Les contenus publics (descriptions des chiens, histoire du projet, activités, contact, etc.) doivent refléter la réalité du terrain telle que validée par Romain. Le développeur structure, intègre et met en ligne ces contenus sans en inventer.
+
 ## Objectif du site
 
 Qimmit Wild North est un site vitrine simple et maintenable destiné à présenter le projet, les chiens, le lieu, ainsi que des photographies et des vidéos. Le site doit privilégier une expérience claire, naturelle et adaptée aux appareils mobiles, tout en restant facile à faire évoluer.
@@ -77,6 +86,24 @@ La structure technique doit faciliter l'ajout progressif de ces langues.
 
 La première version présente le projet, les chiens, le lieu, les médias et les informations de contact. Elle ne comprend pas de système de réservation en ligne. La structure technique doit néanmoins permettre d'ajouter cette fonctionnalité plus tard.
 
+## Publication et outils (phase ultérieure)
+
+Pendant la construction du site, on fait abstraction de la mise en production et des outils numériques du quotidien. Ces sujets seront traités une fois le site prêt.
+
+### Déjà en place (côté Romain)
+
+- **Nom de domaine** : acheté. `TODO` : noter le nom exact dans ce document quand il sera utile pour la configuration.
+- **Google Business** : compte existant. Pas d'intégration ni d'harmonisation pour l'instant avec le site en cours de construction.
+
+### À décider plus tard (Maxime + Romain)
+
+- **Hébergement** du site vitrine — choix à faire ensemble au moment de la mise en ligne.
+- **Outils numériques** que Maxime pourra mettre en place pour Romain, en fonction de ce que Romain préfère :
+  - traiter de manière informatisée (email pro, agenda, réservations, etc.) ;
+  - ou gérer « à l'ancienne » (téléphone, papier, échanges directs).
+
+Le site sera construit de façon à rester déployable chez différents hébergeurs (build statique Astro), sans verrouillage prématuré.
+
 ## Informations métier à compléter
 
 - TODO : description individuelle d'Asiaq pour le site.
@@ -85,5 +112,6 @@ La première version présente le projet, les chiens, le lieu, les médias et le
 - TODO : activités ou expériences proposées (détail des offres touristiques).
 - TODO : coordonnées et moyens de contact à publier.
 - TODO : droits d'utilisation, légendes et crédits des médias.
+- TODO : nom de domaine acheté (à noter ici pour la configuration).
 - TODO : informations légales et politique de confidentialité nécessaires.
 

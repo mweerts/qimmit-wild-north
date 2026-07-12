@@ -47,7 +47,10 @@ Prochaines étapes prioritaires : styles globaux, navigation, page d'accueil, pa
 
 ## 5. Publication
 
-- Choisir l'hébergement et le nom de domaine (`TODO`).
+- Nom de domaine : acheté par Romain *(nom exact à noter ; pas bloquant pour le développement)*.
+- Compte Google Business : existant *(harmonisation avec le site : plus tard)*.
+- Choisir l'hébergement (`TODO` — décision Maxime + Romain à la mise en ligne).
+- Définir les outils numériques du quotidien pour Romain (`TODO` — selon ses préférences informatisé / « à l'ancienne »).
 - Configurer les métadonnées, l'icône du site et le partage social.
 - Vérifier les performances, l'accessibilité et les liens.
 - Tester les principaux navigateurs et formats d'écran.
