@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+	const dogs = await getCollection('dogs');
+	return dogs.map((dog) => ({
+		params: { slug: dog.id },
+		props: { dog },
+	}));
+}
+
+interface Props {
+	dog: CollectionEntry<'dogs'>;
+}
+
+const { dog } = Astro.props;
+const { name, kennel, pedigreeName, profileReady } = dog.data;
+const { Content } = profileReady ? await render(dog) : { Content: null };
+---
+
+<BaseLayout title={name}>
+	<article class="page container container--narrow dog-profile">
+		<nav class="dog-profile__back" aria-label="Fil d'Ariane">
+			<a href="/chiens">← Les chiens</a>
+		</nav>
+
+		<header class="dog-profile__header">
+			<h1>{name}</h1>
+			{
+				(kennel || pedigreeName) && (
+					<p class="dog-profile__meta">
+						{kennel && (
+							<>
+								Élevage <strong>{kennel}</strong>
+							</>
+						)}
+						{kennel && pedigreeName && '. '}
+						{pedigreeName && (
+							<>
+								Nom de pedigree : <strong>{pedigreeName}</strong>
+							</>
+						)}
+						.
+					</p>
+				)
+			}
+		</header>
+
+		{
+			profileReady && Content ? (
+				<div class="dog-profile__content prose">
+					<Content />
+				</div>
+			) : (
+				<p class="todo">
+					TODO : description individuelle de {name} — à rédiger avec Romain.
+				</p>
+			)
+		}
+	</article>
+</BaseLayout>

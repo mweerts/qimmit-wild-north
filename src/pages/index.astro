@@ -1,17 +1,27 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={site.name}>
+	<section class="hero container">
+		<img
+			class="hero__logo"
+			src="/brand/logo-finland/dark.svg"
+			alt={site.name}
+			width="280"
+			height="84"
+		/>
+		<p class="hero__tagline">
+			Esquimau canadien et chiens de traîneau, près de Kuusamo
+		</p>
+		<p class="hero__text">
+			Qimmit Wild North présente un projet touristique et de conservation autour du
+			Qimmiq, sur une propriété en Finlande, à proximité du lac Ala-Kitka.
+		</p>
+		<div class="hero__actions">
+			<a class="button button--primary" href="/projet">Découvrir le projet</a>
+			<a class="button button--secondary" href="/chiens">Rencontrer les chiens</a>
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	dog: CollectionEntry<'dogs'>;
+}
+
+const { dog } = Astro.props;
+const { name, nameMeaning, nameLanguage, profileReady } = dog.data;
+---
+
+<article class="dog-card">
+	<a class="dog-card__link" href={`/chiens/${dog.id}`}>
+		<h2 class="dog-card__name">{name}</h2>
+		{
+			nameMeaning && nameLanguage && (
+				<p class="dog-card__meaning">
+					{nameLanguage.charAt(0).toUpperCase() + nameLanguage.slice(1)} : «{' '}
+					{nameMeaning} »
+				</p>
+			)
+		}
+		<p class="dog-card__status">
+			{profileReady ? 'Voir la fiche' : 'Description à venir'}
+		</p>
+	</a>
+</article>

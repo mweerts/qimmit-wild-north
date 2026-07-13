@@ -5,11 +5,8 @@ pedigreeName: Arctous
 nameMeaning: banquise
 nameLanguage: inuktitut
 order: 1
+profileReady: true
 ---
-
-# Siku
-
-Élevage **Nunavut Inuit Heritage**. Nom de pedigree : **Arctous**.
 
 En inuktitut, son nom signifie « banquise ».
 

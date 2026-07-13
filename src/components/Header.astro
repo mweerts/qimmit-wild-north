@@ -1,0 +1,42 @@
+---
+import { nav, site } from '../config/site';
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function isActive(href: string): boolean {
+	if (href === '/') {
+		return currentPath === '/';
+	}
+	return currentPath === href || currentPath.startsWith(`${href}/`);
+}
+---
+
+<header class="site-header">
+	<div class="container site-header__inner">
+		<a class="site-logo" href="/" aria-label={`${site.name} — Accueil`}>
+			<img
+				class="site-logo__image"
+				src="/brand/logo-finland/dark.svg"
+				alt={site.name}
+				width="160"
+				height="48"
+			/>
+		</a>
+		<nav class="site-nav" aria-label="Navigation principale">
+			{
+				nav.map((item) => (
+					<a
+						class:list={[
+							'site-nav__link',
+							{ 'site-nav__link--active': isActive(item.href) },
+						]}
+						href={item.href}
+						aria-current={isActive(item.href) ? 'page' : undefined}
+					>
+						{item.label}
+					</a>
+				))
+			}
+		</nav>
+	</div>
+</header>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DogCard from '../../components/DogCard.astro';
+import { getCollection } from 'astro:content';
+
+const dogs = (await getCollection('dogs')).sort(
+	(a, b) => a.data.order - b.data.order,
+);
+---
+
+<BaseLayout title="Les chiens">
+	<div class="page container">
+		<div class="container--narrow">
+			<h1>Les chiens</h1>
+			<p class="page-intro">
+				Le projet accueille des Esquimaux canadiens (Qimmiq). Chaque chien a sa
+				fiche ; d'autres profils seront ajoutés au fil du développement du parc.
+			</p>
+		</div>
+
+		<ul class="dog-grid">
+			{dogs.map((dog) => (
+				<li>
+					<DogCard dog={dog} />
+				</li>
+			))}
+		</ul>
+	</div>
+</BaseLayout>
