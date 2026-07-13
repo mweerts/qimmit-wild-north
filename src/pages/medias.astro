@@ -1,11 +1,39 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
 ---
 
 <BaseLayout title="Médias">
 	<div class="page container container--narrow">
 		<h1>Médias</h1>
-		<p class="page-intro">Photographies et vidéos du projet, du lieu et des chiens.</p>
-		<p class="todo">TODO : galerie — sélectionner et optimiser les médias.</p>
+		<p class="page-intro">
+			Photographies, vidéos et articles sur Qimmit Wild North.
+		</p>
+
+		<h2>Presse</h2>
+		<ul class="press-list">
+			{
+				site.press.map((article) => (
+					<li class="press-list__item">
+						<a href={article.url} rel="noopener noreferrer">
+							{article.title}
+						</a>
+						<p class="press-list__meta">
+							{article.source} —{' '}
+							<time datetime={article.date}>
+								{new Date(article.date).toLocaleDateString('fr-FR', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric',
+								})}
+							</time>
+						</p>
+					</li>
+				))
+			}
+		</ul>
+
+		<h2>Galerie</h2>
+		<p class="todo">TODO : sélectionner et optimiser les photos et vidéos.</p>
 	</div>
 </BaseLayout>

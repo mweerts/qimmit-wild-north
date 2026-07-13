@@ -2,7 +2,7 @@
 
 Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : activités touristiques autour des chiens de traîneau (Esquimau canadien / Qimmiq), près de Kuusamo, en Finlande.
 
-Projet initié par **Romain** ; ce dépôt est le site vitrine, développé et maintenu par **Maxime** (frère de Romain, développeur). Voir [`docs/PROJECT.md`](docs/PROJECT.md) pour les rôles et le contexte.
+Projet initié par **Romain Weerts** ; ce dépôt est le site vitrine, développé et maintenu par **Maxime** (frère de Romain, développeur). Voir [`docs/PROJECT.md`](docs/PROJECT.md) pour les rôles et le contexte.
 
 ## Documentation
 

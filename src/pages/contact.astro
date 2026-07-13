@@ -1,11 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+
+const { contact } = site;
 ---
 
 <BaseLayout title="Contact">
 	<div class="page container container--narrow">
 		<h1>Contact</h1>
 		<p class="page-intro">Pour prendre contact avec Qimmit Wild North.</p>
-		<p class="todo">TODO : coordonnées et moyens de contact — à valider avec Romain.</p>
+
+		<dl class="contact-list">
+			<div class="contact-list__item">
+				<dt>Téléphone</dt>
+				<dd>
+					<a href={`tel:${contact.phoneHref}`}>{contact.phone}</a>
+				</dd>
+			</div>
+			<div class="contact-list__item">
+				<dt>Email</dt>
+				<dd>
+					<a href={`mailto:${contact.email}`}>{contact.email}</a>
+				</dd>
+			</div>
+			<div class="contact-list__item">
+				<dt>Instagram</dt>
+				<dd>
+					<a href={contact.instagram} rel="noopener noreferrer">@qimmitwildnorth</a>
+				</dd>
+			</div>
+			<div class="contact-list__item">
+				<dt>Facebook</dt>
+				<dd>
+					<a href={contact.facebook} rel="noopener noreferrer">Qimmit Wild North</a>
+				</dd>
+			</div>
+		</dl>
 	</div>
 </BaseLayout>

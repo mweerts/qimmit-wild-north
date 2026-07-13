@@ -14,7 +14,7 @@ Ce dépôt sert à construire le **site vitrine** de ce projet.
 
 | Rôle | Personne | Responsabilité |
 | ---- | -------- | -------------- |
-| **Porteur du projet** | Romain | Initiative, terrain, chiens, activités, textes et faits métier à publier. |
+| **Porteur du projet** | Romain Weerts | Initiative, terrain, chiens, activités, textes et faits métier à publier. |
 | **Développement du site** | Maxime (frère de Romain, développeur) | Construction et maintenance du site vitrine dans ce dépôt. |
 
 Les contenus publics (descriptions des chiens, histoire du projet, activités, contact, etc.) doivent refléter la réalité du terrain telle que validée par Romain. Le développeur structure, intègre et met en ligne ces contenus sans en inventer.
@@ -72,6 +72,23 @@ Les deux sont mâles et proviennent de la même fratrie.
 
 Description individuelle à rédiger pour le site (`TODO`).
 
+## Contact
+
+Coordonnées publiées sur le site :
+
+| Moyen | Détail |
+| ----- | ------ |
+| **Téléphone** | 0492 71 72 87 |
+| **Email** | info@qimmitwildnorth.com |
+| **Instagram** | [qimmitwildnorth](https://www.instagram.com/qimmitwildnorth/) |
+| **Facebook** | [Qimmit Wild North](https://www.facebook.com/profile.php?id=61591377812424) |
+
+## Presse
+
+| Date | Source | Article |
+| ---- | ------ | ------- |
+| 27 juin 2026 | [Blog de Jean-Louis Xhonneux](http://fourons.blogspirit.com/) | [Initiative d'un fouronnais, Romain Weerts](http://fourons.blogspirit.com/archive/2026/06/27/initiative-d-un-fouronnais-romain-weerts-3392284.html) |
+
 ## Langues du site
 
 Ordre de déploiement prévu :
@@ -110,7 +127,6 @@ Le site sera construit de façon à rester déployable chez différents héberge
 - TODO : indications d'accès pour les visiteurs (parking, accès hiver/été, etc.).
 - TODO : histoire personnelle du porteur de projet et formulation publique de la mission de conservation.
 - TODO : activités ou expériences proposées (détail des offres touristiques).
-- TODO : coordonnées et moyens de contact à publier.
 - TODO : droits d'utilisation, légendes et crédits des médias.
 - TODO : nom de domaine acheté (à noter ici pour la configuration).
 - TODO : informations légales et politique de confidentialité nécessaires.
