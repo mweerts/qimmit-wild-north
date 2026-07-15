@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Page introuvable"
+	description="La page demandée n'existe pas ou n'est plus disponible."
+>
+	<div class="page container container--narrow not-found">
+		<p class="not-found__code" aria-hidden="true">404</p>
+		<h1>Page introuvable</h1>
+		<p class="page-intro">
+			La page que vous cherchez n'existe pas, a été déplacée ou n'est pas encore
+			disponible.
+		</p>
+		<div class="not-found__actions">
+			<a class="button button--primary" href="/">Retour à l'accueil</a>
+			<a class="button button--secondary" href="/contact">Nous contacter</a>
+		</div>
+	</div>
+</BaseLayout>

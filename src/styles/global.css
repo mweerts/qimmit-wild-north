@@ -435,6 +435,29 @@ main {
 	color: var(--color-text-muted);
 }
 
+/* 404 */
+
+.not-found {
+	text-align: center;
+}
+
+.not-found__code {
+	margin: 0 0 var(--space-sm);
+	font-family: var(--font-serif);
+	font-size: clamp(3rem, 12vw, 5rem);
+	line-height: 1;
+	color: var(--color-brand);
+	opacity: 0.35;
+}
+
+.not-found__actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--space-sm);
+	margin-top: var(--space-lg);
+}
+
 @media (max-width: 40rem) {
 	.site-header__inner {
 		flex-direction: column;
