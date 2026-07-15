@@ -5,8 +5,8 @@ export const site = {
 	lang: 'fr',
 	location: 'Tolvantie 48, 43900 Kuusamo, Finlande',
 	contact: {
-		phone: '0492 71 72 87',
-		phoneHref: '+358492717287',
+		phone: '+32 492 71 72 87',
+		phoneHref: '+32492717287',
 		email: 'info@qimmitwildnorth.com',
 		instagram: 'https://www.instagram.com/qimmitwildnorth/',
 		facebook: 'https://www.facebook.com/profile.php?id=61591377812424',

@@ -78,7 +78,7 @@ Coordonnées publiées sur le site :
 
 | Moyen | Détail |
 | ----- | ------ |
-| **Téléphone** | 0492 71 72 87 |
+| **Téléphone** | +32 492 71 72 87 |
 | **Email** | info@qimmitwildnorth.com |
 | **Instagram** | [qimmitwildnorth](https://www.instagram.com/qimmitwildnorth/) |
 | **Facebook** | [Qimmit Wild North](https://www.facebook.com/profile.php?id=61591377812424) |
