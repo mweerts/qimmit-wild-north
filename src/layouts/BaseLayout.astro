@@ -29,5 +29,29 @@ const pageTitle = title === site.name ? title : `${title} — ${site.name}`;
 			<slot />
 		</main>
 		<Footer />
+		<script is:inline>
+			(function () {
+				var openInNewTab = window.matchMedia('(min-width: 768px)').matches;
+
+				document.querySelectorAll('a[href]').forEach(function (link) {
+					var href = link.getAttribute('href');
+					if (
+						!href ||
+						href.startsWith('/') ||
+						href.startsWith('#') ||
+						href.startsWith('tel:') ||
+						href.startsWith('mailto:')
+					) {
+						return;
+					}
+					if (!/^https?:\/\//i.test(href)) return;
+
+					link.rel = 'noopener noreferrer';
+					if (openInNewTab) {
+						link.target = '_blank';
+					}
+				});
+			})();
+		</script>
 	</body>
 </html>
