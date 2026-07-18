@@ -1,9 +1,20 @@
+/**
+ * Site-wide configuration.
+ * Business facts must match docs/PROJECT.md. Do not invent offers or contacts.
+ */
 export const site = {
 	name: 'Qimmit Wild North',
 	description:
-		'Activités touristiques autour des chiens de traîneau — Esquimau canadien (Qimmiq) — près de Kuusamo, en Finlande.',
+		'Projet autour des chiens de traîneau et de l’Esquimau canadien (Qimmiq), près de Kuusamo, en Finlande.',
 	lang: 'fr',
 	location: 'Tolvantie 48, 43900 Kuusamo, Finlande',
+	/** Preprod URL — distinct from the future public domain. */
+	preprodUrl: 'https://qimmitwildnorth.projects.mweerts.dev',
+	/**
+	 * Keep false for preprod / pre-launch.
+	 * Set true only when the public site is intentionally opened to search engines.
+	 */
+	allowIndexing: false,
 	contact: {
 		phone: '+32 492 71 72 87',
 		phoneHref: '+32492717287',

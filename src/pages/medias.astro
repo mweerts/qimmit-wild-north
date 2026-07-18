@@ -7,7 +7,8 @@ import { site } from '../config/site';
 	<div class="page container container--narrow">
 		<h1>Médias</h1>
 		<p class="page-intro">
-			Photographies, vidéos et articles sur Qimmit Wild North.
+			Articles, photographies et vidéos liés à Qimmit Wild North. Seuls les médias
+			dont l’usage est autorisé seront publiés ici.
 		</p>
 
 		<h2>Presse</h2>
@@ -15,9 +16,7 @@ import { site } from '../config/site';
 			{
 				site.press.map((article) => (
 					<li class="press-list__item">
-						<a href={article.url}>
-							{article.title}
-						</a>
+						<a href={article.url}>{article.title}</a>
 						<p class="press-list__meta">
 							{article.source} —{' '}
 							<time datetime={article.date}>
@@ -34,6 +33,9 @@ import { site } from '../config/site';
 		</ul>
 
 		<h2>Galerie</h2>
-		<p class="todo">TODO : sélectionner et optimiser les photos et vidéos.</p>
+		<p class="todo">
+			TODO : sélectionner, optimiser et créditer les photos et vidéos (droits
+			d’utilisation à confirmer).
+		</p>
 	</div>
 </BaseLayout>

@@ -2,6 +2,8 @@
 
 Valise graphique livrée par la graphiste, intégrée au dépôt en juillet 2026.
 
+**Marque :** Qimmit Wild North. Ne pas utiliser l’ancien nom de projet « Qimmiq Wild North » dans l’interface. Certains fichiers sources de la valise portent encore des noms `QimmiQ-*` / `QimmiT-*` : ce sont des noms de fichiers d’archive, pas le libellé public. Les chemins web sous `public/brand/` restent neutres (`icon/`, `logo-finland/`, `logo-square/`).
+
 ## Emplacements
 
 | Dossier | Rôle |

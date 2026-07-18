@@ -1,0 +1,4 @@
+# Cloudflare Pages headers — preprod / pre-launch non-indexing.
+# Remove or relax when the public site is intentionally launched.
+/*
+  X-Robots-Tag: noindex, nofollow

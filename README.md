@@ -1,8 +1,8 @@
 # Qimmit Wild North
 
-Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : activités touristiques autour des chiens de traîneau (Esquimau canadien / Qimmiq), près de Kuusamo, en Finlande.
+Site vitrine pour [Qimmit Wild North](docs/PROJECT.md) : projet de Romain Weerts autour des chiens de traîneau (race Esquimau canadien / Qimmiq), près de Kuusamo, en Finlande.
 
-Projet initié par **Romain Weerts** ; ce dépôt est le site vitrine, développé et maintenu par **Maxime** (frère de Romain, développeur). Voir [`docs/PROJECT.md`](docs/PROJECT.md) pour les rôles et le contexte.
+**Romain** porte le projet réel. **Maxime** développe et maintient ce dépôt. Voir [`docs/PROJECT.md`](docs/PROJECT.md) pour les rôles, faits validés et limites du périmètre.
 
 ## Documentation
 
@@ -35,52 +35,76 @@ Projet initié par **Romain Weerts** ; ce dépôt est le site vitrine, développ
 │   └── raw/               # photos et vidéos brutes (hors Git)
 ├── public/
 │   ├── brand/             # logos SVG pour le site
-│   └── images/            # images web optimisées
+│   ├── images/            # images web optimisées (quand disponibles)
+│   └── _headers           # en-têtes Cloudflare Pages (X-Robots-Tag)
 ├── src/
+│   ├── components/        # Header, Footer, DogCard
+│   ├── config/            # configuration du site (nom, contact, nav, indexation)
 │   ├── content/           # contenus Markdown (textes du site)
 │   │   └── dogs/          # fiches des chiens
-│   └── pages/             # routes Astro
-├── AGENTS.md              # instructions pour Cursor
+│   ├── layouts/
+│   ├── pages/             # routes Astro
+│   └── styles/
+├── AGENTS.md
 ├── astro.config.mjs
 └── package.json
 ```
 
+## Routes actuelles
+
+| Route | Rôle |
+| ----- | ---- |
+| `/` | Accueil |
+| `/projet` | Présentation du projet (contenu métier à compléter) |
+| `/chiens` | Liste des chiens |
+| `/chiens/[slug]` | Fiche chien (collection Markdown) |
+| `/lieu` | Lieu (accès visiteurs en TODO) |
+| `/medias` | Presse + galerie (galerie en TODO) |
+| `/contact` | Coordonnées publiées |
+
 ## Contenus
 
-Les textes du site vivent dans `src/content/`, séparés de la mise en page Astro dans `src/pages/`, `src/layouts/` et `src/components/` (à venir).
-
-Les faits métier validés (lieu, chiens, langues, etc.) sont résumés dans [`docs/PROJECT.md`](docs/PROJECT.md). Avant d'écrire ou de modifier un contenu public, s'y référer. Ne pas inventer d'informations : utiliser des `TODO` explicites quand une information manque.
+Les textes du site vivent dans `src/content/` et `src/config/site.ts`, séparés de la mise en page Astro. Les faits métier validés sont dans [`docs/PROJECT.md`](docs/PROJECT.md). Ne pas inventer d’informations : utiliser des `TODO` explicites.
 
 ### Chiens
-
-Chaque chien a une fiche Markdown dans `src/content/dogs/`. Pour l'instant :
 
 | Fichier | Chien | Statut |
 | ------- | ----- | ------ |
 | [`siku.md`](src/content/dogs/siku.md) | Siku | Description publiée |
-| `asiaq.md` | Asiaq | À rédiger |
+| [`asiaq.md`](src/content/dogs/asiaq.md) | Asiaq | À rédiger |
 
 Convention de nommage pour un chien :
 
-- **nom actuel** — celui utilisé au quotidien et sur le site ;
-- **nom de pedigree** — nom d'origine inscrit au pedigree ;
-- **élevage** — nom de l'élevage d'origine.
+- **nom actuel** — utilisé au quotidien et sur le site ;
+- **nom de pedigree** — nom d’origine inscrit au pedigree ;
+- **élevage** — nom de l’élevage d’origine.
 
 ## Médias et identité visuelle
 
-- La **valise graphique** (`media/brand/`) est versionnée dans Git.
-- Les **logos SVG** servis sur le site sont dans `public/brand/`.
-- Les **photos et vidéos brutes** (`media/raw/`, `*.mov`, `*.mp4`) restent hors Git ; utiliser des versions optimisées dans `public/images/`.
+- Valise graphique versionnée : `media/brand/`.
+- Logos SVG servis : `public/brand/`.
+- Photos/vidéos brutes hors Git (`media/raw/`, `*.mov`, `*.mp4`) ; versions web dans `public/images/`.
 
-Voir [`docs/BRAND.md`](docs/BRAND.md) pour les variantes de logo et les chemins web.
+Voir [`docs/BRAND.md`](docs/BRAND.md).
+
+## Préproduction
+
+- URL connue : [qimmitwildnorth.projects.mweerts.dev](https://qimmitwildnorth.projects.mweerts.dev)
+- Hébergement : Cloudflare Pages (build `npm run build`, sortie `dist/`)
+- Indexation désactivée tant que `site.allowIndexing` est `false` (meta robots, `/robots.txt` généré, `X-Robots-Tag` via `public/_headers`)
+- Pas de Cloudflare Access (ni équivalent) sur la prévisualisation
+- Domaine public officiel : distinct ; nom exact encore à noter dans `docs/PROJECT.md`
 
 ## Avancement
 
-- Projet Astro initialisé, build fonctionnel.
-- Valise graphiste intégrée (`media/brand/valise/`, `public/brand/`).
-- Description de **Siku** rédigée (`src/content/dogs/siku.md`).
-- Pages, styles, navigation et galerie : à construire (voir [`docs/ROADMAP.md`](docs/ROADMAP.md)).
+- Fondations Astro, styles, navigation, header/footer, page 404.
+- Pages vitrine en place ; contenus métier encore partiels (placeholders `TODO`).
+- Contact et presse intégrés.
+- Fiche **Siku** publiée ; **Asiaq** en attente.
+- Préprod Cloudflare déployée ; lancement public non ouvert.
+
+Détail : [`docs/ROADMAP.md`](docs/ROADMAP.md).
 
 ## Stack
 
-Astro, TypeScript, HTML sémantique, CSS plain, contenu Markdown, npm.
+Astro, TypeScript, HTML sémantique, CSS plain, contenu Markdown, npm. Pas de framework frontend additionnel en V1.
